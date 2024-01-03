@@ -7,24 +7,23 @@ public class AddressBookMain {
             Scanner scanner = new Scanner(System.in);
             AddressBook addressBook = new AddressBook("MyAddressBook");
 
-            Contact contact1 = new Contact("John", "Doe", "123 Main St", "City1", "State1", "12345", "123-456-7890", "john@example.com");
-            Contact contact2 = new Contact("Jane", "Doe", "456 Oak St", "City2", "State2", "67890", "987-654-3210", "jane@example.com");
-            Contact contact3 = new Contact("John", "Doe", "123 Main St", "City1", "State1", "12345", "123-456-7890", "john@example.com");
+            Contact contact1 = new Contact("Megala", "R", "123 ooty", "Bangalore", "Karnataka", "12345", "123-456-7890", "mega@gmail.com");
+            Contact contact2 = new Contact("Sanjana", "J", "456 ketti", "Coonoor", "Tamilnadu", "67890", "987-654-3210", "sanjana@gmail.com");
+            Contact contact3 = new Contact("Megala", "R", "123 ooty", "Bangalore", "Karnataka", "12345", "123-456-7890", "mega@gmail.com");
             addressBook.addContact(contact1);
             addressBook.addContact(contact2);
             addressBook.addContact(contact3);
 
-            // Edit contact
-            Contact newContact = new Contact("John", "Doe", "789 Elm St", "City1", "State1", "54321", "111-222-3333", "john.new@example.com");
-            addressBook.editContact("John", "Doe", newContact);
+        
+            Contact newContact = new Contact("Sanjana", "J", "789 Elm St", "Coonoor", "Tamilnadu", "54321", "111-222-3333", "sanju.new@.com");
+            addressBook.editContact("Megala", "R", newContact);
 
-            // Delete contact
-            addressBook.deleteContact("Jane", "Doe");
+        
+            addressBook.deleteContact("Megala", "R");
 
-            // Search and count
-            System.out.println("Contacts in City1: " + addressBook.searchByCity("City1"));
-            System.out.println("Contacts in State2: " + addressBook.searchByState("State2"));
-            System.out.println("Count of contacts in City1: " + addressBook.countByCity("City1"));
-            System.out.println("Count of contacts in State2: " + addressBook.countByState("State2"));
+            System.out.println("Contacts in City1: " + addressBook.searchByCity("Bangalore"));
+            System.out.println("Contacts in State2: " + addressBook.searchByState("Karnataka"));
+            System.out.println("Count of contacts in City1: " + addressBook.countByCity("Coonoor"));
+            System.out.println("Count of contacts in State2: " + addressBook.countByState("Karnataka"));
         }
 }
